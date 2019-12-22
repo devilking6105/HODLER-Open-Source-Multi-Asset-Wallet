@@ -17,7 +17,7 @@ function isValidForCoin(id: Integer; address: AnsiString): Boolean;
 function getURLToExplorer(id: Integer; hash: AnsiString): AnsiString;
 
 type
-  CoinType = ( Bitcoin , Litecoin , Dash , BitcoinCash , Ethereum , RavenCoin , DigiByte , BitcoinSV , Nano );
+  CoinType = ( Bitcoin , Litecoin , Dash , BitcoinCash , Ethereum , RavenCoin , DigiByte , BitcoinSV , Nano, HelpTheHomeless );
 
 type
   coinInfo = record
@@ -156,6 +156,21 @@ const
     availableFirstLetter: 'xn';
     qrname: 'nano';
     ResourceName: 'NANO_IMG';
+  ),
+  
+  (
+    id: 9;
+    displayName: 'HelpTheHomeless';
+    name: 'helpthehomeless';
+    shortcut: 'HTH';
+    WifByte: '80';
+    p2sh: '7a';
+    p2pk: '3c';
+    flag: 0;
+    decimals: 8;
+    availableFirstLetter: 'H';
+    qrname: 'helpthehomeless';
+    ResourceName: 'HTH_IMG';
   ));
 
 implementation
@@ -187,6 +202,8 @@ begin
       URL := 'https://bsvexplorer.info//#/address/';
     8:
       URL := 'https://www.nanode.co/account/';
+    9:
+      URL := 'https://explorer.hth.world/address/';
   end;
 
   result := URL + addr;
@@ -216,6 +233,8 @@ begin         // ethereum
       URL := 'https://bsvexplorer.info//#/tx/';
     8:
       URL := 'https://www.nanode.co/block/';
+    9:
+      URL := 'https://explorer.hth.world/tx/';
   end;
 
   result := URL + hash;
