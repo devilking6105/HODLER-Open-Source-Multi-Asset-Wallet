@@ -759,6 +759,10 @@
             <ResourceType>RCDATA</ResourceType>
             <ResourceId>RAVENCOIN_IMG</ResourceId>
         </RcItem>
+        <RcItem Include="coin_icons\HTH.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>HTH_IMG</ResourceId>
+        </RcItem>
         <RcItem Include="token_icons\imgNotFound.png">
             <ResourceType>RCDATA</ResourceType>
             <ResourceId>IMG_NOT_FOUND</ResourceId>
